@@ -1,6 +1,6 @@
 # Applications
 super + Return
-  alacritty
+  kitty
 
 Print
   flameshot gui
@@ -57,7 +57,7 @@ super + shift + {Left,Down,Up,Right}
   bspc node -s {west,south,north,east}
 
 super + ctrl + {Left,Down,Up,Right}
-  bspc node -v {-10 0,10 0,-10 10,10 0}
+  bspc node -v {-10 0,0 10,0 -10,10 0}
 
 # Resize
 super + alt + {Left,Down,Up,Right}

@@ -7,9 +7,16 @@ packer.startup(function(use)
 
   use "tpope/vim-sensible"
   use "projekt0n/github-nvim-theme"
-  
-  use "williamboman/nvim-lsp-installer"
-  use "neovim/nvim-lspconfig"
+  use "navarasu/onedark.nvim"
+  use "tiagovla/tokyodark.nvim"
+
+  --use "williamboman/nvim-lsp-installer"
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    "neovim/nvim-lspconfig",
+  }
 
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
@@ -17,12 +24,17 @@ packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/nvim-cmp"
   use "onsails/lspkind.nvim"
+  use "L3MON4D3/LuaSnip"
 
-  use "nvim-treesitter/nvim-treesitter"
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    commit = "4cccb6f494eb255b32a290d37c35ca12584c74d0",
+    run = function()
+      require("nvim-treesitter.install").update { with_sync = true }
+    end,
+  }
 
   use "windwp/nvim-autopairs"
-
-  use "xiyaowong/nvim-transparent"
 
   use "ryanoasis/vim-devicons"
 
@@ -38,5 +50,26 @@ packer.startup(function(use)
   use "nvim-telescope/telescope-file-browser.nvim"
 
   use "nvim-lualine/lualine.nvim"
+  
+  use "romgrk/barbar.nvim"
+  
+  use "jose-elias-alvarez/null-ls.nvim"
+  use "sbdchd/neoformat" 
+  
+  use "MunifTanjim/prettier.nvim"
+  use {
+    "glepnir/lspsaga.nvim",
+    branch = "main"
+  }
+
+  use "RRethy/nvim-treesitter-endwise"
+
+  use "sheerun/vim-polyglot"
+
+  use "norcalli/nvim-colorizer.lua"
+  
+  use "folke/zen-mode.nvim"
+
+  use "andweeb/presence.nvim"
 end
 )

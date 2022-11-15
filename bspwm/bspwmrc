@@ -1,15 +1,14 @@
 #!/bin/bash
-
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 /usr/libexec/gsd-xsettings &
-feh --bg-fill ~/.local/share/backgrounds/default.jpg &
+feh --bg-fill --no-fehbg ~/.local/share/backgrounds/key2.png &
 picom --config ~/.config/picom/picom.conf &
-xss-lock --transfer-sleep-lock -- betterlockscreen -l --nofork &
+xss-lock -n 'bash /usr/share/doc/xss-lock/dim-screen.sh' -- ~/.config/lock-screen.sh -n &
 
-~/.config/touchpad.sh
-~/.config/polybar/launch_polybar.sh
-~/.config/ulauncher/launch_ulauncher.sh
+~/.config/touchpad.sh &
+~/.config/polybar/launch_polybar.sh &
+~/.config/ulauncher/launch_ulauncher.sh &
 
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
