@@ -1,17 +1,17 @@
 local lualine = require("lualine")
 
 local statusline_theme = {
-	bg = "#121721",
-	fg = "#7b8fb7",
-	yellow = "#ECBE7B",
+	bg = "#19212D",
+	fg = "#7D94B6",
+	yellow = "#d29922",
 	cyan = "#008080",
-	darkblue = "#081633",
-	green = "#98be65",
+	darkblue = "#090c10",
+	green = "#3fb950",
 	orange = "#FF8800",
 	violet = "#a9a1e1",
-	magenta = "#c678dd",
-	blue = "#51afef",
-	red = "#ec5f67",
+	magenta = "#bc8cff",
+	blue = "#58a6ff",
+	red = "#ff7b72",
 }
 
 local conditions = {
@@ -30,12 +30,12 @@ local conditions = {
 
 local config = {
 	options = {
-		globalstatus = true,
+		globalstatus = false,
 		component_separators = "",
 		section_separators = "",
 		theme = {
 			normal = { c = { fg = statusline_theme.fg, bg = statusline_theme.bg } },
-			inactive = { c = { fg = statusline_theme.fg, bg = statusline_theme.bg } },
+			inactive = { c = { fg = "#0D1117", bg = "#0D1117" } },
 		},
 	},
 	sections = {
@@ -103,7 +103,6 @@ ins_right({ "location" })
 
 ins_right({ "progress", color = { fg = statusline_theme.fg, gui = "bold" } })
 
---[[
 ins_left {
   'diagnostics',
   sources = { 'nvim_diagnostic' },
@@ -112,7 +111,6 @@ ins_left {
     color_error = { fg = statusline_theme.red },
   },
 }
---]]
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2

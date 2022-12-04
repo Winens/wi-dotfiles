@@ -7,7 +7,11 @@ vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
 
+vim.opt.synmaxcol = 128
+vim.cmd("syntax sync minlines=256")
+
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true

@@ -1,9 +1,9 @@
 local theme = require("github-theme")
 theme.setup({
 	theme_style = "dark_default",
-	dark_float = true,
-	dark_sidebar = true,
+	transparent = false,
 	function_style = "italic",
+	sidebars = { "qf", "vista_kind", "terminal", "packer" },
 	colors = {
 		border = "#495057",
 	},

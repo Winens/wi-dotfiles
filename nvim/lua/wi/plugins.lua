@@ -5,6 +5,8 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
+	use("enricobacis/paste.vim")
+
 	use({
 		"chipsenkbeil/distant.nvim",
 		config = function()
@@ -30,7 +32,7 @@ packer.startup(function(use)
 	use("tpope/vim-sensible")
 
 	use("projekt0n/github-nvim-theme")
-	use("navarasu/onedark.nvim")
+	use("ful1e5/onedark.nvim")
 	use("Luxed/ayu-vim")
 
 	use({
@@ -50,7 +52,7 @@ packer.startup(function(use)
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		--commit = "4cccb6f494eb255b32a290d37c35ca12584c74d0",
+		commit = "4cccb6f494eb255b32a290d37c35ca12584c74d0",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
@@ -71,7 +73,8 @@ packer.startup(function(use)
 	use("nvim-telescope/telescope.nvim")
 	use("nvim-telescope/telescope-file-browser.nvim")
 
-	use("nvim-lualine/lualine.nvim")
+	--use("nvim-lualine/lualine.nvim")
+	use("ojroques/nvim-hardline")
 
 	use("romgrk/barbar.nvim")
 
@@ -92,7 +95,7 @@ packer.startup(function(use)
 
 	use("folke/zen-mode.nvim")
 
-	--use("andweeb/presence.nvim")
+	use("andweeb/presence.nvim")
 
 	use("goolord/alpha-nvim")
 

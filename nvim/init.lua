@@ -1,7 +1,7 @@
 require("wi.options")
 require("wi.keymaps")
 require("wi.plugins")
-require("wi.lualine")
+require("wi.hardline")
 require("wi.theme")
 require("wi.lsp_config")
 require("wi.lspkind")

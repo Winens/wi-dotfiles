@@ -11,5 +11,5 @@ require("bufferline").setup({
 	insert_at_start = false,
 	no_name_title = nil,
 	maximum_padding = 1,
-	maximum_length = 24,
+	maximum_length = 32,
 })

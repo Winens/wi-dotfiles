@@ -26,8 +26,9 @@ keymap.set("i", "<S-Left>", "<Esc>v<Left>")
 keymap.set("i", "<S-Right>", "<Esc>v<Right>")
 
 keymap.set("v", "<C-c>", '"+y<Esc>')
-keymap.set("v", "<C-x>", '"+d<Esc>i')
 keymap.set("i", "<C-v>", "<Esc>pi")
+keymap.set("v", "<C-x>", '"+d<Esc>i')
+--vim.cmd("let g:paste_no_mappings = 1")
 
 --keymap.set("i", "<C-Backspace>", '<Esc>dbi')
 --keymap.set("i", "<C-Del>", '<Esc>dw')
